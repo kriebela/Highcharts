@@ -1,0 +1,1019 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Tuition in the United States</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">${demo.css}</style>
+
+<script type="text/javascript">
+
+var prevList = 99;
+var prevList2 = 99;
+var prevList3 = 99;
+
+$(function () {
+    $('#chart-A').highcharts({
+        credits: {
+            enabled: false
+        },
+        chart: {
+            type: 'line',
+            style: {
+                fontFamily: 'Century Gothic'
+            },
+            align: 'center'
+        },
+        title: {
+            text: 'Tuition by State',
+            style: {
+                fontWeight: 'bold',
+                fontSize: 14
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        xAxis: {
+            categories: ['2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+            labels: {
+                enabled: false
+            },
+            tickColor: '',
+            tickInterval: 2
+        },
+        yAxis: {
+            min: 3000,
+            max: 16000,
+            startOnTick: false,
+            title: {
+                enabled: false
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: false
+                },
+                enableMouseTracking: true
+            },
+            series: {
+                marker: {
+                    enabled: false,
+                    symbol: 'circle'
+                },
+                color: '#C7C7C7',
+                tooltip: {
+                    valuePrefix: '$'
+                },
+                lineWidth: 1
+            }
+        },
+        series: [{
+            name: 'Alabama',
+            id: 'Alabama',
+            data: [5683,5841,5753,6008,6475,7189,8071,8452,9098,9359,9496,9751]
+        }, {
+            name: 'Alaska',
+            id: 'Alaska',
+            data: [4328,4633,4919,5070,5075,5455,5759,5762,6026,6012,6149,6571]
+        }, {
+            name: 'Arizona',
+            id: 'Arizona',
+            data: [5138,5416,5481,5682,6058,7263,8840,9967,10134,10296,10414,10646]
+        }, {
+            name: 'Arkansas',
+            id: 'Arkansas',
+            data: [5772,6082,6232,6415,6417,6627,6901,7029,7287,7408,7606,7867]
+        }, {
+            name: 'California',
+            id: 'California',
+            data: [5286,5528,5335,5672,5898,7259,8194,9436,9361,9274,9187,9270]
+        }, {
+            name: 'Colorado',
+            id: 'Colorado',
+            data: [4704,5407,5596,6227,6284,6948,7748,8316,8793,9293,9299,9748]
+        }, {
+            name: 'Connecticut',
+            id: 'Connecticut',
+            data: [7984,8249,8368,8678,8721,9371,9827,9736,10037,10453,10664,11397]
+        }, {
+            name: 'Delaware',
+            id: 'Delaware',
+            data: [8353,8611,8682,8946,8995,9987,10534,11026,11363,11503,11515,11676]
+        }, {
+            name: 'Florida',
+            id: 'Florida',
+            data: [3848,3924,3888,3879,4150,4783,5511,5941,6495,6452,6345,6360]
+        }, {
+            name: 'Georgia',
+            id: 'Georgia',
+            data: [4298,4492,4584,4790,4831,5550,6428,7709,7853,7992,8063,8447]
+        }, {
+            name: 'Hawaii',
+            id: 'Hawaii',
+            data: [4267,4264,4957,5748,6318,7356,8164,8840,8972,9270,9713,10175]
+        }, {
+            name: 'Idaho',
+            id: 'Idaho',
+            data: [4525,4790,4874,5021,5004,5415,5835,6002,6239,6462,6610,6818]
+        }, {
+            name: 'Illinois',
+            id: 'Illinois',
+            data: [8183,8444,9450,10425,10872,11536,12008,12285,12675,12853,12813,13189]
+        }, {
+            name: 'Indiana',
+            id: 'Indiana',
+            data: [7368,7517,7687,7877,7836,8470,8744,8813,9078,9119,9049,9120]
+        }, {
+            name: 'Iowa',
+            id: 'Iowa',
+            data: [6813,6863,6919,7124,6980,7438,7832,7988,8157,8007,7868,7877]
+        }, {
+            name: 'Kansas',
+            id: 'Kansas',
+            data: [5345,5739,6114,6583,6521,6995,7254,7310,7583,7896,8270,8530]
+        }, {
+            name: 'Kentucky',
+            id: 'Kentucky',
+            data: [5640,6142,6760,7194,7388,7886,8231,8423,8815,8889,9223,9567]
+        }, {
+            name: 'Louisiana',
+            id: 'Louisiana',
+            data: [4453,4513,4421,4388,4419,4745,5181,5542,6120,6748,7337,7871]
+        }, {
+            name: 'Maine',
+            id: 'Maine',
+            data: [7058,7408,7759,8403,8764,9469,9792,9894,9753,9594,9560,9573]
+        }, {
+            name: 'Maryland',
+            id: 'Maryland',
+            data: [8531,8717,8463,8380,8020,8285,8470,8410,8552,8663,8697,9163]
+        }, {
+            name: 'Massachusetts',
+            id: 'Massachusetts',
+            data: [8863,8959,8893,9036,8939,10239,10386,10738,11093,10981,10987,11588]
+        }, {
+            name: 'Michigan',
+            id: 'Michigan',
+            data: [7931,8668,8998,9737,9906,10817,11095,11452,11660,11851,11618,11991]
+        }, {
+            name: 'Minnesota',
+            id: 'Minnesota',
+            data: [8144,8481,8817,8934,9024,9739,10276,10583,10793,10691,10582,10831]
+        }, {
+            name: 'Mississippi',
+            id: 'Mississippi',
+            data: [5029,5110,5219,5450,5367,5488,5795,5993,6416,6707,6870,7147]
+        }, {
+            name: 'Missouri',
+            id: 'Missouri',
+            data: [7477,7659,7653,7842,7842,7996,7959,8118,8276,8268,8409,8564]
+        }, {
+            name: 'Montana',
+            id: 'Missouri',
+            data: [5630,6007,6166,6075,5789,6079,6143,6212,6412,6360,6301,6351]
+        }, {
+            name: 'Nebraska',
+            id: 'Nebraska',
+            data: [5947,6476,6132,6394,6462,6909,7225,7295,7483,7473,7348,7608]
+        }, {
+            name: 'Nevada',
+            id: 'Nevada',
+            data: [3621,3687,4275,4523,4771,5035,5822,6384,6656,6525,6438,6667]
+        }, {
+            name: 'New Hampshire',
+            id: 'New Hampshire',
+            data: [10188,10484,10704,11111,11168,12273,13077,14263,15224,14969,14756,15160]
+        }, {
+            name: 'New Jersey',
+            id: 'New Jersey',
+            data: [10054,10505,10943,11427,11661,12338,12752,12708,12935,12998,13027,13303]
+        }, {
+            name: 'New Mexico',
+            id: 'New Mexico',
+            data: [4926,5187,4757,4867,4904,5304,5614,5741,5915,6089,6166,6355]
+        }, {
+            name: 'New York',
+            id: 'New York',
+            data: [6235,6114,5912,5816,5556,6361,6342,6554,6836,7076,7306,7644]
+        }, {
+            name: 'North Carolina',
+            id: 'North Carolina',
+            data: [4493,4464,4770,4933,4764,5030,5827,6010,6459,6657,6685,6973]
+        }, {
+            name: 'North Dakota',
+            id: 'North Dakota',
+            data: [5804,6197,6464,6649,6626,7021,7191,7248,7298,7431,7527,7688]
+        }, {
+            name: 'Ohio',
+            id: 'Ohio',
+            data: [10378,10186,9903,9695,9194,9425,9913,9980,10175,10157,10104,10196]
+        }, {
+            name: 'Oklahoma',
+            id: 'Oklahoma',
+            data: [4454,4639,5198,5721,6120,6008,6294,6413,6670,6726,7094,7450]
+        }, {
+            name: 'Oregon',
+            id: 'Oregon',
+            data: [6579,6632,6539,6812,6769,7653,8138,8445,8658,8786,8949,9371]
+        }, {
+            name: 'Pennsylvania',
+            id: 'Pennsylvania',
+            data: [10394,10556,10615,11219,11233,11929,12404,12766,12893,13079,13157,13395]
+        }, {
+            name: 'Rhode Island',
+            id: 'Rhode Island',
+            data: [7476,7864,7959,8273,8384,9423,10201,10578,11376,11132,10977,11390]
+        }, {
+            name: 'South Carolina',
+            id: 'South Carolina',
+            data: [8330,9020,9280,9591,9908,10550,11016,10940,11192,11407,11470,11816]
+        }, {
+            name: 'South Dakota',
+            id: 'South Dakota',
+            data: [5479,5610,5827,6122,6182,6684,6916,7176,7696,7809,7713,8055]
+        }, {
+            name: 'Tennessee',
+            id: 'Tennessee',
+            data: [5426,5817,5832,6147,6169,6758,7140,7574,7996,8210,8941,9263]
+        }, {
+            name: 'Texas',
+            id: 'Texas',
+            data: [6395,6577,7019,7390,7507,8121,8477,8507,8692,8705,8852,9117]
+        }, {
+            name: 'Utah',
+            id: 'Utah',
+            data: [4125,4376,4475,4650,4638,5068,5381,5599,5846,6042,6171,6363]
+        }, {
+            name: 'Vermont',
+            id: 'Vermont',
+            data: [11067,11295,11473,12013,12305,13316,13655,13833,14089,14267,14501,14993]
+        }, {
+            name: 'Virginia',
+            id: 'Virginia',
+            data: [7030,7356,7689,8029,8225,8795,9643,10072,10314,10590,11202,11819]
+        }, {
+            name: 'Washington',
+            id: 'Washington',
+            data: [6192,6415,6649,6858,6980,8113,8973,10029,11037,11045,10703,10288]
+        }, {
+            name: 'West Virginia',
+            id: 'West Virginia',
+            data: [4575,4728,4886,5048,5107,5519,5721,5848,6130,6388,6698,7171]
+        }, {
+            name: 'Wisconsin',
+            id: 'Wisconsin',
+            data: [6575,6871,7086,7348,7373,7945,8441,8659,9052,8931,8785,8815]
+        }, {
+            name: 'Wyoming',
+            id: 'Wyoming',
+            data: [4086,4188,4122,4072,3929,4129,4299,4357,4456,4499,4654,4891]
+        }, {
+            name: 'U.S. Avg',
+            data: [
+                {
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        fontSize: 6
+                    },
+                    y: 6253
+                },
+                6491,6652,6936,6999,7618,8113,8406,8702,8784,8871,
+                {
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        fontSize: 6
+                    },
+                    y: 9142
+                }],
+            color: '#000000',
+            lineWidth: 4,
+        }] 
+    });
+
+    var chart = $('#chart-A').highcharts();
+
+    // Highlight State
+    $('#list').change(function () {
+        if (prevList < 50) {
+            chart.series[prevList].update({
+                color: "#C7C7C7",
+                lineWidth: 1
+            });
+            chart.series[prevList].data[0].update({
+                marker: {
+                        enabled: false
+                    },
+                dataLabels: {
+                    enabled: false
+                }
+            });
+            chart.series[prevList].data[11].update({
+                marker: {
+                        enabled: false
+                    },
+                dataLabels: {
+                    enabled: false
+                }
+            });
+        };
+        chart.series[50].group.toFront();
+        if (list.value != 99) {
+            chart.series[list.value].update({
+                color: "#CD1D1E",
+                lineWidth: 4
+            });
+            chart.series[list.value].data[0].update({
+                marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                },
+                dataLabels: {
+                    enabled: true,
+                    fontSize: 6,
+                    color: "#CD1D1E"
+                }
+
+            });
+            chart.series[list.value].data[11].update({
+                marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                },
+                dataLabels: {
+                    enabled: true,
+                    fontSize: 6,
+                    color: "#CD1D1E"
+                }
+            });
+            chart.series[list.value].group.toFront();
+        };
+        prevList = list.value;
+    });
+
+
+    $('#chart-B').highcharts({
+        credits: {
+            enabled: false
+        },
+        chart: {
+            type: 'line',
+            style: {
+                fontFamily: 'Century Gothic'
+            }
+        },
+        title: {
+            text: '% Change in Tuition since 2004-05',
+            style: {
+                fontWeight: 'bold',
+                fontSize: 14
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        xAxis: {
+            categories: ['2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+            labels: {
+                enabled: false
+            },
+            tickColor: '',
+            tickInterval: 2
+        },
+        yAxis: {
+            min: -15,
+            max: 140,
+            title: {
+                enabled: false
+            },
+            labels: {
+                format: '{value}'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: false
+                },
+                enableMouseTracking: true
+            },
+            series: {
+                marker: {
+                    enabled: false,
+                    symbol: 'circle'
+                },
+                color: '#C7C7C7',
+                tooltip: {
+                    valueSuffix: '%'
+                },
+                lineWidth: 1
+            }
+        },
+        series: [{
+            name: 'Alabama',
+            data: [0,3,1,6,14,27,42,49,60,65,67,72]
+        }, {
+            name: 'Alaska',
+            data: [0,7,14,17,17,26,33,33,39,39,42,52]
+        }, {
+            name: 'Arizona',
+            data: [0,5,7,11,18,41,72,94,97,100,103,107]
+        }, {
+            name: 'Arkansas',
+            data: [0,5,8,11,11,15,20,22,26,28,32,36]
+        }, {
+            name: 'California',
+            data: [0,5,1,7,12,37,55,79,77,75,74,75]
+        }, {
+            name: 'Colorado',
+            data: [0,15,19,32,34,48,65,77,87,98,98,107]
+        }, {
+            name: 'Connecticut',
+            data: [0,3,5,9,9,17,23,22,26,31,34,43]
+        }, {
+            name: 'Delaware',
+            data: [0,3,4,7,8,20,26,32,36,38,38,40]
+        }, {
+            name: 'Florida',
+            data: [0,2,1,1,8,24,43,54,69,68,65,65]
+        }, {
+            name: 'Georgia',
+            data: [0,5,7,11,12,29,50,79,83,86,88,97]
+        }, {
+            name: 'Hawaii',
+            data: [0,0,16,35,48,72,91,107,110,117,128,138]
+        }, {
+            name: 'Idaho',
+            data: [0,6,8,11,11,20,29,33,38,43,46,51]
+        }, {
+            name: 'Illinois',
+            data: [0,3,15,27,33,41,47,50,55,57,57,61]
+        }, {
+            name: 'Indiana',
+            data: [0,2,4,7,6,15,19,20,23,24,23,24]
+        }, {
+            name: 'Iowa',
+            data: [0,1,2,5,2,9,15,17,20,18,15,16]
+        }, {
+            name: 'Kansas',
+            data: [0,7,14,23,22,31,36,37,42,48,55,60]
+        }, {
+            name: 'Kentucky',
+            data: [0,9,20,28,31,40,46,49,56,58,64,70]
+        }, {
+            name: 'Louisiana',
+            data: [0,1,-1,-1,-1,7,16,24,37,52,65,77]
+        }, {
+            name: 'Maine',
+            data: [0,5,10,19,24,34,39,40,38,36,35,36]
+        }, {
+            name: 'Maryland',
+            data: [0,2,-1,-2,-6,-3,-1,-1,0,2,2,7]
+        }, {
+            name: 'Massachusetts',
+            data: [0,1,0,2,1,16,17,21,25,24,24,31]
+        }, {
+            name: 'Michigan',
+            data: [0,9,13,23,25,36,40,44,47,49,46,51]
+        }, {
+            name: 'Minnesota',
+            data: [0,4,8,10,11,20,26,30,33,31,30,33]
+        }, {
+            name: 'Mississippi',
+            data: [0,2,4,8,7,9,15,19,28,33,37,42]
+        }, {
+            name: 'Missouri',
+            data: [0,2,2,5,5,7,6,9,11,11,12,15]
+        }, {
+            name: 'Montana',
+            data: [0,7,10,8,3,8,9,10,14,13,12,13]
+        }, {
+            name: 'Nebraska',
+            data: [0,9,3,8,9,16,21,23,26,26,24,28]
+        }, {
+            name: 'Nevada',
+            data: [0,2,18,25,32,39,61,76,84,80,78,84]
+        }, {
+            name: 'New Hampshire',
+            data: [0,3,5,9,10,20,28,40,49,47,45,49]
+        }, {
+            name: 'New Jersey',
+            data: [0,4,9,14,16,23,27,26,29,29,30,32]
+        }, {
+            name: 'New Mexico',
+            data: [0,5,-3,-1,0,8,14,17,20,24,25,29]
+        }, {
+            name: 'New York',
+            data: [0,-2,-5,-7,-11,2,2,5,10,13,17,23]
+        }, {
+            name: 'North Carolina',
+            data: [0,-1,6,10,6,12,30,34,44,48,49,55]
+        }, {
+            name: 'North Dakota',
+            data: [0,7,11,15,14,21,24,25,26,28,30,32]
+        }, {
+            name: 'Ohio',
+            data: [0,-2,-5,-7,-11,-9,-4,-4,-2,-2,-3,-2]
+        }, {
+            name: 'Oklahoma',
+            data: [0,4,17,28,37,35,41,44,50,51,59,67]
+        }, {
+            name: 'Oregon',
+            data: [0,1,-1,4,3,16,24,28,32,34,36,42]
+        }, {
+            name: 'Pennsylvania',
+            data: [0,2,2,8,8,15,19,23,24,26,27,29]
+        }, {
+            name: 'Rhode Island',
+            data: [0,5,6,11,12,26,36,41,52,49,47,52]
+        }, {
+            name: 'South Carolina',
+            data: [0,8,11,15,19,27,32,31,34,37,38,42]
+        }, {
+            name: 'South Dakota',
+            data: [0,2,6,12,13,22,26,31,40,43,41,47]
+        }, {
+            name: 'Tennessee',
+            data: [0,7,7,13,14,25,32,40,47,51,65,71]
+        }, {
+            name: 'Texas',
+            data: [0,3,10,16,17,27,33,33,36,36,38,43]
+        }, {
+            name: 'Utah',
+            data: [0,6,8,13,12,23,30,36,42,46,50,54]
+        }, {
+            name: 'Vermont',
+            data: [0,2,4,9,11,20,23,25,27,29,31,35]
+        }, {
+            name: 'Virginia',
+            data: [0,5,9,14,17,25,37,43,47,51,59,68]
+        }, {
+            name: 'Washington',
+            data: [0,4,7,11,13,31,45,62,78,78,73,66]
+        }, {
+            name: 'West Virginia',
+            data: [0,3,7,10,12,21,25,28,34,40,46,57]
+        }, {
+            name: 'Wisconsin',
+            data: [0,5,8,12,12,21,28,32,38,36,34,34]
+        }, {
+            name: 'Wyoming',
+            data: [0,2,1,0,-4,1,5,7,9,10,14,20]
+        }, {
+            name: 'U.S. Avg',
+            data: [
+                {
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                    },
+                    y: 0
+                },
+            4,6,11,12,21,28,33,38,40,41,
+                {
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                    },
+                    dataLabels: {
+                        enabled: true,
+                        fontSize: 6
+                    },
+                    y: 45
+                }],
+            color: '#000000',
+            lineWidth: 4
+        }]  
+    });
+
+    var chart2 = $('#chart-B').highcharts();
+
+    // Highlight State
+    $('#list').change(function () {
+        if (prevList2 < 50) {
+            chart2.series[prevList2].update({
+                color: "#C7C7C7",
+                lineWidth: 1
+            });
+            chart2.series[prevList2].data[0].update({
+                marker: {
+                        enabled: false
+                }
+            });
+            chart2.series[prevList2].data[11].update({
+                marker: {
+                        enabled: false
+                },
+                dataLabels: {
+                    enabled: false
+                }
+            });
+        };
+        chart2.series[50].group.toFront();
+        if (list.value != 99) {
+            chart2.series[list.value].update({
+                color: "#CD1D1E",
+                lineWidth: 4
+            });
+            chart2.series[list.value].data[0].update({
+                marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                }
+            });
+            chart2.series[list.value].data[11].update({
+                marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                },
+                dataLabels: {
+                    enabled: true,
+                    fontSize: 6,
+                    color: "#CD1D1E"
+                }
+            });
+            chart2.series[list.value].group.toFront();
+        };
+        prevList2 = list.value;
+    });
+
+
+    $('#chart-C').highcharts({
+        credits: {
+            enabled: false
+        },
+        chart: {
+            type: 'line',
+            style: {
+                fontFamily: 'Century Gothic'
+            }
+        },
+        title: {
+            text: '% Variance to U.S. Average',
+            style: {
+                fontWeight: 'bold',
+                fontSize: 14
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        xAxis: {
+            categories: ['2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015'],
+            labels: {
+                rotation: 0
+            },
+            tickColor: '',
+            tickInterval: 2
+        },
+        yAxis: {
+            min: -50,
+            max: 75,
+            title: {
+                enabled: false
+            },
+            labels: {
+                format: '{value}'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: false
+                },
+                enableMouseTracking: true
+            },
+            series: {
+                marker: {
+                    enabled: false,
+                    symbol: 'circle'
+                },
+                color: '#C7C7C7',
+                tooltip: {
+                    valueSuffix: '%'
+                },
+                lineWidth: 1
+            }
+        },
+        series: [{
+            name: 'Alabama',
+            data: [-11,-12,-16,-15,-10,-7,-2,-1,3,5,5,5]
+        }, {
+            name: 'Alaska',
+            data: [-32,-30,-28,-28,-29,-30,-30,-33,-32,-33,-32,-29]
+        }, {
+            name: 'Arizona',
+            data: [-20,-19,-20,-20,-15,-6,7,17,15,15,15,14]
+        }, {
+            name: 'Arkansas',
+            data: [-10,-9,-8,-9,-10,-15,-16,-18,-18,-17,-16,-16]
+        }, {
+            name: 'California',
+            data: [-18,-17,-22,-20,-18,-6,0,11,6,4,2,-1]
+        }, {
+            name: 'Colorado',
+            data: [-27,-19,-18,-12,-12,-10,-6,-3,-1,4,3,5]
+        }, {
+            name: 'Connecticut',
+            data: [25,24,23,22,22,21,19,14,14,17,18,22]
+        }, {
+            name: 'Delaware',
+            data: [30,29,27,26,26,29,28,29,29,29,27,25]
+        }, {
+            name: 'Florida',
+            data: [-40,-41,-43,-45,-42,-38,-33,-30,-27,-28,-30,-32]
+        }, {
+            name: 'Georgia',
+            data: [-33,-32,-33,-32,-32,-28,-22,-10,-11,-11,-11,-9]
+        }, {
+            name: 'Hawaii',
+            data: [-33,-36,-27,-19,-12,-5,-1,4,1,4,7,9]
+        }, {
+            name: 'Idaho',
+            data: [-29,-28,-28,-29,-30,-30,-29,-30,-29,-28,-27,-27]
+        }, {
+            name: 'Illinois',
+            data: [28,27,39,47,52,49,46,44,43,44,42,42]
+        }, {
+            name: 'Indiana',
+            data: [15,13,13,11,9,9,6,3,3,2,0,-2]
+        }, {
+            name: 'Iowa',
+            data: [6,3,2,1,-2,-4,-5,-6,-8,-11,-13,-15]
+        }, {
+            name: 'Kansas',
+            data: [-17,-14,-10,-7,-9,-10,-12,-14,-14,-12,-8,-8]
+        }, {
+            name: 'Kentucky',
+            data: [-12,-8,-1,2,3,2,0,-1,0,-1,2,3]
+        }, {
+            name: 'Louisiana',
+            data: [-31,-32,-35,-38,-38,-39,-37,-35,-31,-25,-19,-16]
+        }, {
+            name: 'Maine',
+            data: [10,11,14,19,22,22,19,16,10,7,6,3]
+        }, {
+            name: 'Maryland',
+            data: [33,31,24,18,12,7,3,-2,-3,-3,-4,-2]
+        }, {
+            name: 'Massachusetts',
+            data: [38,35,31,28,25,32,26,26,25,23,22,24]
+        }, {
+            name: 'Michigan',
+            data: [24,30,32,37,38,39,35,34,32,32,29,29]
+        }, {
+            name: 'Minnesota',
+            data: [27,27,29,26,26,25,25,24,22,19,17,16]
+        }, {
+            name: 'Mississippi',
+            data: [-22,-23,-23,-23,-25,-29,-30,-30,-27,-25,-24,-23]
+        }, {
+            name: 'Missouri',
+            data: [17,15,12,11,10,3,-3,-5,-6,-8,-7,-8]
+        }, {
+            name: 'Montana',
+            data: [-12,-10,-9,-14,-19,-22,-25,-27,-27,-29,-30,-32]
+        }, {
+            name: 'Nebraska',
+            data: [-7,-3,-10,-10,-10,-11,-12,-15,-15,-16,-19,-18]
+        }, {
+            name: 'Nevada',
+            data: [-44,-45,-37,-36,-33,-35,-29,-25,-25,-27,-29,-28]
+        }, {
+            name: 'New Hampshire',
+            data: [59,58,57,57,56,58,59,67,72,67,63,63]
+        }, {
+            name: 'New Jersey',
+            data: [57,58,61,61,63,59,55,49,46,45,44,43]
+        }, {
+            name: 'New Mexico',
+            data: [-23,-22,-30,-31,-31,-32,-32,-33,-33,-32,-32,-32]
+        }, {
+            name: 'New York',
+            data: [-3,-8,-13,-18,-22,-18,-23,-23,-23,-21,-19,-18]
+        }, {
+            name: 'North Carolina',
+            data: [-30,-33,-30,-30,-33,-35,-29,-30,-27,-26,-26,-25]
+        }, {
+            name: 'North Dakota',
+            data: [-9,-7,-5,-6,-7,-10,-13,-15,-17,-17,-17,-17]
+        }, {
+            name: 'Ohio',
+            data: [62,53,45,37,28,21,20,17,15,14,12,9]
+        }, {
+            name: 'Oklahoma',
+            data: [-31,-30,-24,-19,-14,-23,-24,-25,-25,-25,-22,-20]
+        }, {
+            name: 'Oregon',
+            data: [3,0,-4,-4,-5,-1,-1,-1,-2,-2,-1,1]
+        }, {
+            name: 'Pennsylvania',
+            data: [62,59,56,58,57,54,51,50,46,46,46,44]
+        }, {
+            name: 'Rhode Island',
+            data: [17,18,17,17,17,21,24,24,29,24,21,22]
+        }, {
+            name: 'South Carolina',
+            data: [30,36,36,35,38,36,34,28,27,27,27,27]
+        }, {
+            name: 'South Dakota',
+            data: [-15,-16,-14,-14,-14,-14,-16,-16,-13,-13,-15,-14]
+        }, {
+            name: 'Tennessee',
+            data: [-15,-13,-14,-13,-14,-13,-13,-11,-10,-8,-1,-1]
+        }, {
+            name: 'Texas',
+            data: [0,-1,3,4,5,5,3,0,-2,-3,-2,-2]
+        }, {
+            name: 'Utah',
+            data: [-36,-34,-34,-34,-35,-35,-35,-34,-34,-32,-32,-32]
+        }, {
+            name: 'Vermont',
+            data: [73,70,68,70,72,72,66,62,59,59,60,61]
+        }, {
+            name: 'Virginia',
+            data: [10,11,13,13,15,13,17,18,17,18,24,27]
+        }, {
+            name: 'Washington',
+            data: [-3,-4,-2,-3,-2,5,9,17,25,23,18,10]
+        }, {
+            name: 'West Virginia',
+            data: [-29,-29,-28,-29,-29,-29,-30,-32,-31,-29,-26,-23]
+        }, {
+            name: 'Wisconsin',
+            data: [3,3,4,4,3,2,3,1,2,0,-3,-5]
+        }, {
+            name: 'Wyoming',
+            data: [-36,-37,-39,-43,-45,-47,-48,-49,-50,-50,-49,-48]
+        }, {
+            name: 'U.S. Avg',
+            data: [
+                {
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                    },
+                    y: 0
+                },
+            0,0,0,0,0,0,0,0,0,0,
+                {
+                    marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                    },
+                    y: 0
+                }],            
+            color: '#000000',
+            lineWidth: 4
+        }]  
+    });
+
+    var chart3 = $('#chart-C').highcharts();
+
+    // Highlight State
+    $('#list').change(function () {
+        if (prevList3 < 50) {
+            chart3.series[prevList3].update({
+                color: "#C7C7C7",
+                lineWidth: 1
+            });
+            chart3.series[prevList3].data[0].update({
+                marker: {
+                        enabled: false
+                },
+                dataLabels: {
+                    enabled: false
+                }
+            });
+            chart3.series[prevList3].data[11].update({
+                marker: {
+                        enabled: false
+                },
+                dataLabels: {
+                    enabled: false
+                }
+            });
+        };
+        chart3.series[50].group.toFront();
+        if (list.value != 99) {
+            chart3.series[list.value].update({
+                color: "#CD1D1E",
+                lineWidth: 4
+            });
+            chart3.series[list.value].data[0].update({
+                marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                },
+                dataLabels: {
+                    enabled: true,
+                    fontSize: 6,
+                    color: "#CD1D1E"
+                }
+            });
+            chart3.series[list.value].data[11].update({
+                marker: {
+                        enabled: true,
+                        symbol: 'circle'
+                },
+                dataLabels: {
+                    enabled: true,
+                    fontSize: 6,
+                    color: "#CD1D1E"
+                }
+            });
+            chart3.series[list.value].group.toFront();
+        };
+        prevList3 = list.value;
+    });
+
+});
+</script>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<table style="width:325px; font-family: Avenir; font-size: 18px;" align="left">
+  <tr>
+    <td><b><center>The Rising Cost of Tuition</center></b></td>
+  </tr>
+  <tr>
+    <td><b><center>in the United States</center></b></td>
+  </tr>
+</table>
+<br><br><br>
+<hr style="border: 1px solid lightgray; width: 325px; " align="left";/>
+<div>
+<select id="list" name="stateList" style="margin:0 auto; width: 315px; font-size: 16px">
+    <option value="99">Choose a State</option>
+    <option value="0">Alabama</option>
+    <option value="1">Alaska</option>
+    <option value="2">Arizona</option>
+    <option value="3">Arkansas</option>
+    <option value="4">California</option>
+    <option value="5">Colorado</option>
+    <option value="6">Connecticut</option>
+    <option value="7">Delaware</option>
+    <option value="8">Florida</option>
+    <option value="9">Georgia</option>
+    <option value="10">Hawaii</option>
+    <option value="11">Idaho</option>
+    <option value="12">Illinois</option>
+    <option value="13">Indiana</option>
+    <option value="14">Iowa</option>
+    <option value="15">Kansas</option>
+    <option value="16">Kentucky</option>
+    <option value="17">Louisiana</option>
+    <option value="18">Maine</option>
+    <option value="19">Maryland</option>
+    <option value="20">Massachusetts</option>
+    <option value="21">Michigan</option>
+    <option value="22">Minnesota</option>
+    <option value="23">Mississippi</option>
+    <option value="24">Missouri</option>
+    <option value="25">Montana</option>
+    <option value="26">Nebraska</option>
+    <option value="27">Nevada</option>
+    <option value="28">New Hampshire</option>
+    <option value="29">New Jersey</option>
+    <option value="30">New Mexico</option>
+    <option value="31">New York</option>
+    <option value="32">North Carolina</option>
+    <option value="33">North Dakota</option>
+    <option value="34">Ohio</option>
+    <option value="35">Oklahoma</option>
+    <option value="36">Oregon</option>
+    <option value="37">Pennsylvania</option>
+    <option value="38">Rhode Island</option>
+    <option value="39">South Carolina</option>
+    <option value="40">South Dakota</option>
+    <option value="41">Tennessee</option>
+    <option value="42">Texas</option>
+    <option value="43">Utah</option>
+    <option value="44">Vermont</option>
+    <option value="45">Virginia</option>
+    <option value="46">Washington</option>
+    <option value="47">West Virginia</option>
+    <option value="48">Wisconsin</option>
+    <option value="49">Wyoming</option>
+</select>
+<hr style="border: 1px dashed lightgray; width: 325px; " align="left";/>
+<div id="chart-A" class="container" style="width: 320px; height: 250px; display:inline"></div>
+<hr style="border: 1px dashed lightgray; width: 325px;" align="left";/>
+<div id="chart-B" class="container" style="width: 320px; height: 250px; display:inline"></div>
+<hr style="border: 1px dashed lightgray; width: 325px;" align="left";/>
+<div id="chart-C" class="container" style="width: 320px; height: 275px; display:inline"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Analytical Skills Required vs. Competency</title>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<style type="text/css">${demo.css}</style>
+
+<script type="text/javascript">
+
+$(function () {
+    $('#chart-A').highcharts({
+        credits: {
+            enabled: false
+        },
+        chart: {
+            type: 'line',
+            style: {
+                fontFamily: 'Century Gothic'
+            }
+        },
+        title: {
+            text: 'Competency exceeds skills needed for only two essential skills',
+            style: {
+                fontWeight: 'bold',
+                fontSize: 14,
+                color: '#078D00'
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        xAxis: {
+            categories: ['Essential Skill', 'Competency'],
+            labels: {
+                enabled: true
+            },
+            tickColor: '',
+            tickInterval: 1
+        },
+        yAxis: {
+            title: {
+                text: '% of Respondents'
+            },
+            min: 0,
+            max: 100,
+            labels: {
+                format: '{value}'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: false
+                },
+                enableMouseTracking: true
+            },
+            series: {
+                marker: {
+                    enabled: true,
+                    symbol: 'circle'
+                },
+                color: '#C7C7C7',
+                tooltip: {
+                    valueSuffix: '%'
+                },
+                lineWidth: 2
+            }
+        },
+        series: [{
+            name: 'Data Collection & Analysis',
+            data: [83,33]
+        }, {
+            name: 'Interpretation & Visualisation',
+            data: [59,8]
+        }, {
+            name: 'Maths & Statistics',
+            data: [54,30]
+        }, {
+            name: 'Big Data',
+            data: [47,31]
+        }, {
+            name: 'Machine Learning & Prediction',
+            data: [46,9]
+        }, {
+            name: 'Business Intelligence & Domain Expertise',
+            data: [33,18]
+        }, {
+            name: 'Advanced Computing & Programming',
+            data: [28,29],
+            color: '#078D00',
+            legend: true
+        }, {
+            name: 'Open Source Tools & Concepts',
+            data: [22,29],
+            color: '#078D00'
+        }] 
+    });
+
+});
+</script>
+	</head>
+	<body>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<table style="width:550px; font-family: Century Gothic; font-size: 18px;" align="left">
+  <tr>
+    <td><b><center>Analytical Skills Required vs. Competency</center></b></td>
+  </tr>
+</table>
+<br><br><br>
+<div id="chart-A" class="container" style="width: 550px; height: 550px"></div>
+</div>
+</body>
+</html>
