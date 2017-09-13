@@ -17,10 +17,17 @@ $(function () {
         chart: {
             type: 'line',
             style: {
-                fontFamily: 'Century Gothic'
+                fontFamily: 'Open Sans'
             }
         },
         title: {
+            text: 'Analytical Skills Required vs. Competency',
+            style: {
+                fontWeight: 'bold',
+                fontSize: 18
+            }
+        },
+        subtitle: {
             text: 'Competency exceeds skills needed for only two essential skills',
             style: {
                 fontWeight: 'bold',
@@ -105,12 +112,6 @@ $(function () {
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-<table style="width:550px; font-family: Century Gothic; font-size: 18px;" align="left">
-  <tr>
-    <td><b><center>Analytical Skills Required vs. Competency</center></b></td>
-  </tr>
-</table>
-<br><br><br>
 <div id="chart-A" class="container" style="width: 550px; height: 550px"></div>
 </div>
 </body>
